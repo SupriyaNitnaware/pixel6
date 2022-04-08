@@ -1,0 +1,58 @@
+<form class="signup-form" action="/verify" method="post" >
+
+    <!-- form header -->
+    <div class="form-header">
+        <h1>Apply for a Personal Loan</h1>
+      </div>
+
+    <!-- form body -->
+<div class="form-body">
+
+    <!-- Full Name -->
+    <div class="form-group">
+        <label for="fname" class="label-title">Full Name *</label>
+        <input type="text" id="fname" maxlength="4" class="form-input" placeholder="enter your full name" required="required">
+    </div>
+
+    <!-- City and PanNumber -->
+    <div class="horizontal-group">
+        <div class="form-group left">
+            <label for="city" class="label-title">City *</label>
+            <input type="text" id="city" class="form-input" placeholder="enter your city" required="required" />
+        </div>
+        <div class="form-group right">
+            <label for="panno" class="label-title">Pan Number *</label>
+            <input type="text" id="panno" maxlength="10" class="form-input" placeholder="enter your 10-digit pan number" required="required" />
+        </div>
+    </div>
+
+    <!-- Email -->
+    <div class="form-group">
+       <label for="email" class="label-title">Email *</label>
+       <input type="email" id="email" maxlength="255" class="form-input" placeholder="enter your email" required="required">
+    </div>
+  
+    <!-- Mobile No and OTP -->
+<div class="horizontal-group">
+  
+    <div class="form-group left">
+      <label for="mobno" class="label-title"> Mobile Number *</label>
+      <input type="text" id="mobno" maxlength="10" class="form-input" placeholder="enter your 10-digit mobile number" required="required">
+      <button class="btn2" (click)="getOtp()">Get otp</button>
+    </div>      
+    
+    <div class="form-group right">
+      <label for="otp" class="label-title">OTP *</label>
+      <input type="password" class="form-input" maxlength="4" id="otp" placeholder="enter otp" required="required">
+    </div>  
+  </div>
+</div>
+    
+    <!-- form footer -->
+  <div class="form-footer">
+    * required
+    <button type="submit" class="btn" (ngSubmit)="onSubmit()">submit</button>
+    <button type="reset" class="btn" (onClick)="OnReset()">Reset</button>
+  </div>
+
+</form>
